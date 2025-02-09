@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+</head>
+<body>
+    <h1>Prediction Results</h1>
+    <p>Accuracy: {{ accuracy }}</p>
+    <p>Precision: {{ precision }}</p>
+    <p>Recall: {{ recall }}</p>
+    <p>ROC AUC: {{ roc_auc }}</p>
+    <h2>Confusion Matrix:</h2>
+    <pre>{{ confusion_matrix }}</pre>
+    <img src="{{ url_for('static', filename='prediction_plot.png') }}" alt="Prediction Plot">
+</body>
+</html>
